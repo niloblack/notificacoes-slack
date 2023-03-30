@@ -1,0 +1,25 @@
+{
+    "name": "niloblack/notificacoes-slack",
+    "description": "Projeto criado para enviar notificações para o slack",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NiloBlack\\NotificacoesSlack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Danilo Ângelo",
+            "email": "danilloangelo@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "1.5",
+        "psr/container": "1.0",
+        "php-di/php-di": "6.3.5",        
+        "tuupola/slim-basic-auth": "3.3.1"
+    }
+}

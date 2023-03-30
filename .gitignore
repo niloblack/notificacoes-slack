@@ -1,0 +1,4 @@
+### PHP ###
+constants.php
+vendor/
+composer.lock
