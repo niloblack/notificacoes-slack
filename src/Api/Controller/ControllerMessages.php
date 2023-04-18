@@ -40,6 +40,7 @@ Class ControllerMessages extends Controller {
                     $this->postRESTAPI($message->url,
                                        json_encode(['username' => $message->username, 
                                                     'channel' => $message->channel, 
+                                                    'icon_url' => $message->icon_url, 
                                                     'text' => $message->text]));
                     $this->_model->setId($message->id);
                     $this->_model->updateSentAt();
@@ -77,8 +78,7 @@ Class ControllerMessages extends Controller {
             $this->_model->setUsername($request->getParsedBody()["username"]);
             $this->_model->setIcon_url($request->getParsedBody()["icon_url"]);
             $this->_model->setText($request->getParsedBody()["text"]);            
-            $this->_model->setSchedule_for($request->getParsedBody()["schedule_for"]);
-            $this->_model->create();
+            $this->_model->setSchedule_for($request->getParsedBody()["schedule_for"]);            
 
             $data = $this->_model->create();            
             
