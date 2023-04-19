@@ -40,6 +40,7 @@ Class ControllerMessages extends Controller {
                     $this->postRESTAPI($message->url,
                                        json_encode(['username' => $message->username, 
                                                     'channel' => $message->channel, 
+                                                    'as_user' => false,
                                                     'icon_url' => $message->icon_url, 
                                                     'text' => $message->text]));
                     $this->_model->setId($message->id);
